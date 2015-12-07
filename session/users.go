@@ -148,6 +148,20 @@ func PreferenceHandler(w http.ResponseWriter, r *http.Request) {
 	result.Succ = user.Save()
 }
 
+func CreateLearn4meSession(w http.ResponseWriter, r *http.Request) {
+	// create a HTTP session
+	httpSession, _ := HTTPSession.Get(r, "wide-session")
+	httpSession.Values["username"] = "learn4me"
+	httpSession.Values["id"] = strconv.Itoa(rand.Int())
+	httpSession.Options.MaxAge = conf.Wide.HTTPSessionMaxAge
+	if "" != conf.Wide.Context {
+		httpSession.Options.Path = conf.Wide.Context
+	}
+	httpSession.Save(r, w)
+
+	logger.Debugf("Created a HTTP session [%s] for user [%s]", httpSession.Values["id"].(string), "learn4me")
+}
+
 // LoginHandler handles request of user login.
 func LoginHandler(w http.ResponseWriter, r *http.Request) {
 	if "GET" == r.Method {

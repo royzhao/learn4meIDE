@@ -210,16 +210,16 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 
 	httpSession, _ := session.HTTPSession.Get(r, "wide-session")
 	if httpSession.IsNew {
-		http.Redirect(w, r, conf.Wide.Context+"login", http.StatusFound)
-
-		return
+		// http.Redirect(w, r, conf.Wide.Context+"login", http.StatusFound)
+		session.CreateLearn4meSession(w, r)
+		// return
 	}
 
 	username := httpSession.Values["username"].(string)
 	if "playground" == username { // reserved user for Playground
-		http.Redirect(w, r, conf.Wide.Context+"login", http.StatusFound)
-
-		return
+		// http.Redirect(w, r, conf.Wide.Context+"login", http.StatusFound)
+		session.CreateLearn4meSession(w, r)
+		// return
 	}
 
 	httpSession.Options.MaxAge = conf.Wide.HTTPSessionMaxAge
