@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="{{.conf.StaticServer}}/static/css/side.css?{{.conf.StaticResourceVersion}}">
         <link rel="stylesheet" href="{{.conf.StaticServer}}/static/css/start.css?{{.conf.StaticResourceVersion}}">
         <link rel="stylesheet" href="{{.conf.StaticServer}}/static/css/about.css?{{.conf.StaticResourceVersion}}">
+        <link rel="stylesheet" href="{{.conf.StaticServer}}/static/css/terminal.css?{{.conf.StaticResourceVersion}}">
 
         <link id="themesLink" rel="stylesheet" href="{{.conf.StaticServer}}/static/css/themes/{{.user.Theme}}.css?{{.conf.StaticResourceVersion}}">
 
@@ -533,6 +534,9 @@
                     <div data-index="notification">
                         <span title="{{.i18n.notification}}">{{.i18n.notification}}</span>
                     </div>
+                    <div data-index="terminal">
+                        <span title="{{.i18n.terminal}}">{{.i18n.terminal}}</span>
+                    </div>
                 </div>
                 <div class="tabs-panel">
                     <div data-index="output">
@@ -552,6 +556,11 @@
                     </div>
                     <div class="fn-none" data-index="notification">
                         <div tabindex="-1" class="notification"><table cellpadding="0" cellspacing="0"></table></div>
+                    </div>
+                    <div class="fn-none" data-index="terminal">
+                        <div class="terminal" tabindex="-1">
+                            <div id="terminal"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -695,5 +704,7 @@
         <script type="text/javascript" src="{{.conf.StaticServer}}/static/js/windows.js?{{.conf.StaticResourceVersion}}"></script>
         <script type="text/javascript" src="{{.conf.StaticServer}}/static/js/hotkeys.js?{{.conf.StaticResourceVersion}}"></script>
         <script type="text/javascript" src="{{.conf.StaticServer}}/static/js/bottomGroup.js?{{.conf.StaticResourceVersion}}"></script>
+        <script type="text/javascript"  src="{{.conf.StaticServer}}/static/js/hterm.js"></script>
+        <script type="text/javascript"  src="{{.conf.StaticServer}}/static/js/gotty.js"></script>
     </body>
 </html>

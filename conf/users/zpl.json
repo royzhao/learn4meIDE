@@ -1,0 +1,42 @@
+{
+    "Name": "zpl",
+    "Password": "cff4bf948429aba915b113b610346b53087154f3",
+    "Salt": "ldllptwitnwwcbxp",
+    "Email": "zpl@me.com",
+    "Gravatar": "9f72847b88d0e7f7881a59280608c782",
+    "Workspace": "/home/zpl/workspace/zpl",
+    "Locale": "zh_CN",
+    "GoFormat": "gofmt",
+    "FontFamily": "Helvetica",
+    "FontSize": "13px",
+    "Theme": "dark",
+    "Keymap": "wide",
+    "Created": 1449125487996884345,
+    "Updated": 1449481301516729883,
+    "Lived": 1449483869561051110,
+    "Editor": {
+        "FontFamily": "Consolas, 'Courier New', monospace",
+        "FontSize": "inherit",
+        "LineHeight": "17px",
+        "Theme": "lesser-dark",
+        "TabSize": "4"
+    },
+    "LatestSessionContent": {
+        "FileTree": [
+            "/home/zpl/workspace/zpl/src",
+            "/home/zpl/workspace/zpl/src/gotty",
+            "/home/zpl/workspace/zpl/src/gotty/app",
+            "/home/zpl/workspace/zpl/src/gotty/libapps",
+            "/home/zpl/workspace/zpl/src/gotty/resources"
+        ],
+        "Files": [
+            "/home/zpl/workspace/zpl/src/gotty/app/app.go",
+            "/home/zpl/workspace/zpl/src/gotty/flags.go"
+        ],
+        "CurrentFile": "/home/zpl/workspace/zpl/src/gotty/flags.go",
+        "FileTreeLayout": null,
+        "EditorLayout": null,
+        "OutlineLayout": null,
+        "BottomLayout": null
+    }
+}

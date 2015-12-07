@@ -31,6 +31,7 @@ import (
 	"github.com/b3log/wide/editor"
 	"github.com/b3log/wide/event"
 	"github.com/b3log/wide/file"
+	"github.com/b3log/wide/gotty/app"
 	"github.com/b3log/wide/i18n"
 	"github.com/b3log/wide/log"
 	"github.com/b3log/wide/notification"
@@ -157,6 +158,10 @@ func main() {
 	http.HandleFunc(conf.Wide.Context+"/find/decl", handlerWrapper(editor.FindDeclarationHandler))
 	http.HandleFunc(conf.Wide.Context+"/find/usages", handlerWrapper(editor.FindUsagesHandler))
 
+	//terminal
+	command := []string{"bash"}
+	terminal := app.AppEndPoint(command)
+	http.HandleFunc(conf.Wide.Context+"/ws", handlerWrapper(terminal.HandleWS))
 	// shell
 	// http.HandleFunc(conf.Wide.Context+"/shell/ws", handlerWrapper(shell.WSHandler))
 	// http.HandleFunc(conf.Wide.Context+"/shell", handlerWrapper(shell.IndexHandler))
@@ -186,6 +191,9 @@ func main() {
 
 	logger.Infof("Wide is running [%s]", conf.Wide.Server+conf.Wide.Context)
 
+	// terminal.SetAppServer(s)
+
+	// err := s.ListenAndServe()
 	err := http.ListenAndServe(conf.Wide.Server, nil)
 	if err != nil {
 		logger.Error(err)

@@ -1,0 +1,33 @@
+{
+    "Name": "zpl1",
+    "Password": "c5118698c91b652dbd4b88916286d566d163252d",
+    "Salt": "iyiuolrnjsdmfisq",
+    "Email": "zpl1@zpl.com",
+    "Gravatar": "2a002744b70d0e116b8ed26fb1b42b87",
+    "Workspace": "/home/zpl/workspace/zpl1",
+    "Locale": "en_US",
+    "GoFormat": "gofmt",
+    "FontFamily": "Helvetica",
+    "FontSize": "13px",
+    "Theme": "default",
+    "Keymap": "wide",
+    "Created": 1449482052933383625,
+    "Updated": 1449482052933383625,
+    "Lived": 1449482505561222566,
+    "Editor": {
+        "FontFamily": "Consolas, 'Courier New', monospace",
+        "FontSize": "inherit",
+        "LineHeight": "17px",
+        "Theme": "wide",
+        "TabSize": "4"
+    },
+    "LatestSessionContent": {
+        "FileTree": [],
+        "Files": [],
+        "CurrentFile": "",
+        "FileTreeLayout": null,
+        "EditorLayout": null,
+        "OutlineLayout": null,
+        "BottomLayout": null
+    }
+}

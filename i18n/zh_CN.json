@@ -178,5 +178,7 @@
     "terms": "使用条款",
     "download": "下载",
     "decompress": "解压缩",
-    "keymap": "快捷键"
+    "keymap": "快捷键",
+    "terminal":"Terminal"
+
 }
